@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.Fatih.HMSNote" android:installLocation="preferExternal">
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <application android:label="HMS_Yarisma.Android" android:icon="@drawable/notes" android:debuggable="true" android:name="crc647df147508f2c5e2f.MainApplication" android:allowBackup="true">
+    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="HMS_Yarisma" android:theme="@style/MainTheme" android:name="crc643789059f059043f7.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <service android:name="crc64a98abb514ffad9f1.KeepAliveService" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.BatteryBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.EnergySaverBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Connectivity Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.ConnectivityBroadcastReceiver" />
+    <activity android:configChanges="orientation|screenSize" android:name="crc64a0e0a82d0db9a07d.IntermediateActivity" />
+    <provider android:authorities="com.Fatih.HMSNote.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="xamarin.essentials.fileProvider">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/xamarin_essentials_fileprovider_file_paths" />
+    </provider>
+    <activity android:configChanges="orientation|screenSize" android:name="crc64a0e0a82d0db9a07d.WebAuthenticatorIntermediateActivity" />
+    <receiver android:enabled="true" android:exported="false" android:name="crc643f46942d9dd1fff9.PowerSaveModeBroadcastReceiver" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="com.Fatih.HMSNote.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.Fatih.HMSNote" />
+      </intent-filter>
+    </receiver>
+    <provider android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider" android:authorities="com.Fatih.HMSNote.AGCInitializeProvider" android:exported="false" />
+    <service android:name="com.huawei.agconnect.core.ServiceDiscovery" android:exported="false" />
+    <!-- 用于判断是否集成了本lib -->
+    <meta-data android:name="availableLoaded" android:value="yes" />
+    <provider android:name="com.huawei.hms.update.provider.UpdateProvider" android:authorities="com.Fatih.HMSNote.hms.update.provider" android:exported="false" android:grantUriPermissions="true"></provider>
+    <!--
+        为后续统计第三方app集成了哪些Kit，因此需要Kit在自己的AndroidManifest.xml文件中定义业务标签元数据，
+        流水线打包时会替换成HMSVER对应的版本号，不要手动修改
+        -->
+    <meta-data android:name="com.huawei.hms.client.service.name:base" android:value="base:5.0.4.301" />
+    <!-- SDK依赖的HMSCore的最低api level元数据 -->
+    <meta-data android:name="com.huawei.hms.min_api_level:base:hmscore" android:value="1" />
+    <activity android:name="com.huawei.hms.hwid.internal.ui.activity.HwIdSignInHubActivity" android:configChanges="fontScale|uiMode" android:excludeFromRecents="true" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+    <activity android:name="com.huawei.hms.account.internal.ui.activity.AccountSignInHubActivity" android:excludeFromRecents="true" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+    <!-- 切记同步修改 HuaweiIdAuthInternalConstant.HMS_SDK_VERSION -->
+    <meta-data android:name="com.huawei.hms.client.service.name:hwid" android:value="hwid:5.0.2.300" />
+    <meta-data android:name="com.huawei.hms.min_api_level:hwid:hwid" android:value="1" />
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />
+    <activity android:name="com.huawei.hms.activity.BridgeActivity" android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout|uiMode" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:screenOrientation="behind" android:theme="@android:style/Theme.Translucent">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent" />
+    </activity>
+    <activity android:name="com.huawei.hms.activity.EnableServiceActivity" android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout" android:exported="false"></activity>
+    <activity android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity" android:configChanges="orientation|screenSize" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar" />
+    </activity>
+    <activity android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent" />
+    </activity>
+    <provider android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider" android:authorities="com.Fatih.HMSNote.updateSdk.fileProvider" android:exported="false" android:grantUriPermissions="true"></provider>
+  </application>
+  <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+  <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
+</manifest>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HMS_Yarisma.Page1"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <StyleSheet Source="Styles/main-style.css"/>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="noteHeader" Placeholder="Header" BackgroundColor="#e6e6e6" Margin="10,10,10, 5"/>
+            <Editor x:Name="noteText" VerticalOptions="FillAndExpand" BackgroundColor="#f1f1f1"  Placeholder="Note here!" Margin="10, 5, 10, 5"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Save" HorizontalOptions="FillAndExpand" BackgroundColor="#61b15a" Clicked="Save_Clicked" Margin="10, 5, 5, 10"/>
+                <Button Text="Cancel" Clicked="Cancel_Clicked" BackgroundColor="#ff5722" HorizontalOptions="FillAndExpand" Margin="5, 5, 10, 10"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

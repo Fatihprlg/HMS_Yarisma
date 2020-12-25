@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HMS_Yarisma.Notes"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <StyleSheet Source="Styles/main-style.css"/>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <RelativeLayout x:Name="mainRelative">
+            <BoxView BackgroundColor="#ff5722" x:Name="topBg" StyleClass="topBg"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression 
+                            Type=RelativeToParent,
+                            Property=Width,
+                            Factor=1
+                     }"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.10
+                     }"
+                />
+            <AbsoluteLayout  
+                  RelativeLayout.XConstraint="{ConstraintExpression 
+                        Type=RelativeToView, 
+                        ElementName=topBg,
+                        Property=Width, Factor=0.1}"
+                  RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToView,
+                        ElementName=topBg,
+                        Property=Height, Factor=1,Constant=-25}"
+                  RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToView,
+                        ElementName=topBg,
+                        Property=Width, Factor=0.8}"
+                  >
+                <BoxView  StyleClass="topBar" AbsoluteLayout.LayoutBounds="0.5,0,0.15,1" AbsoluteLayout.LayoutFlags="All"/>
+                <FlexLayout AbsoluteLayout.LayoutBounds="0.5,0,0.15,1" AbsoluteLayout.LayoutFlags="All">
+
+                    <ImageButton x:Name="addButton" Margin="5" Scale="0.5" Source="edit.png" BackgroundColor="Transparent" Aspect="AspectFit" Clicked="AddButton_Clicked"/>
+                </FlexLayout>
+            </AbsoluteLayout>
+            <StackLayout x:Name="emptyNote" IsVisible="False" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=X,
+                        Factor=1, Constant=120
+                }"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Y,
+                        Factor=1, Constant=400
+                }" >
+                <Label Text="There is no note yet :(" FontSize="Large"/>
+            </StackLayout>
+            <!--<AbsoluteLayout HeightRequest="100"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Height, Factor=0, Constant=110}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Width,
+                                Factor=1}">
+                <BoxView BackgroundColor="#e6e6e6" CornerRadius="10"  Margin="10, 0" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                <Label Text="Header" Margin="20, 5" FontSize="Large" TextColor="Black"/>
+                <Label Margin="20, 30, 20, 5" LineBreakMode="TailTruncation" FontSize="Caption" MaxLines="3"
+                       Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                       Donec ultricies vitae dolor vel fermentum. Duis elementum 
+                       sit amet ligula non aliquet. Suspendisse auctor ex facilisis 
+                       nisl fringilla dictum. Praesent mattis massa a scelerisque 
+                       viverra. Phasellus at venenatis lectus. Sed consequat, tortor 
+                       ut interdum tristique, nunc augue congue ante, eu scelerisque sem
+                       odio sit amet ipsum. Sed efficitur rhoncus tortor non pulvinar."/>
+                <ImageButton AbsoluteLayout.LayoutBounds="0,0,1.85,0.35" AbsoluteLayout.LayoutFlags="All" x:Name="editBtn" Margin="5" Scale="0.5" Source="pencil.png" BackgroundColor="Transparent" Aspect="AspectFit" Clicked="EditBtn_Clicked"/>
+                </AbsoluteLayout>-->
+
+
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

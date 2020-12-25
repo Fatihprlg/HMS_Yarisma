@@ -1,0 +1,14 @@
+{
+	"client":{
+		"appType":"1",
+		"cp_id":"5190090000028750404",
+		"product_id":"736430079244754536",
+		"client_id":"523793606834663808",
+		"client_secret":"C9ECDB1A131A73DAE3C33B1E36E52F794C8DF2A7BC0F83C49D56BC156C5E157E",
+		"project_id":"736430079244754536",
+		"app_id":"103549135",
+		"api_key":"CgB6e3x9hFTls2N0d4XNMZe5XtCqvCUPgC70dv6RfyFX9x6XQqUvs3eTijAKp0wScjAO2Bkc4rAh14CCRGSG8SfX",
+		"package_name":"com.hmsnote"
+	},
+	"configuration_version":"1.0"
+}

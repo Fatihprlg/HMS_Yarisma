@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HMS_Yarisma.MainPage"
+             Visual="Material"
+             BackgroundColor="#00bcd4"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="Styles/main-style.css"/>
+    </ContentPage.Resources>
+
+    <Frame CornerRadius="10" Margin="15">
+        <StackLayout Padding="20" BackgroundColor="White">
+            <Image StyleClass="icon" Source="notes.png"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Aspect="AspectFit"/>
+            <Label StyleClass="header" Text="HMS Note" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <StackLayout StyleClass="enGroup" >
+               <Button  Text="Sıgn ın wıth HUAWEI ID"  StyleClass="submitBtn" x:Name="submitBtn" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+
+</ContentPage>

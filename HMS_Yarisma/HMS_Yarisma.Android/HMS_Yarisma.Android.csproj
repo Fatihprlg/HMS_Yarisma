@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CA89361-274D-4D20-99DF-D716B7E2598E}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HMS_Yarisma.Droid</RootNamespace>
+    <AssemblyName>HMS_Yarisma.Android</AssemblyName>
+    <Deterministic>True</Deterministic>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidHttpClientHandlerType>System.Net.Http.HttpClientHandler</AndroidHttpClientHandlerType>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>D:\mykeystore.jks</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>123456</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>accountkitshowcase</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>123456</AndroidSigningKeyPass>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>D:\mykeystore.jks</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>123456</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>accountkitshowcase</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>123456</AndroidSigningKeyPass>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="XAgconnectCore-1.4.0.300">
+      <HintPath>LibDLLs\XAgconnectCore-1.4.0.300.dll</HintPath>
+    </Reference>
+    <Reference Include="XAvailableUpdate-5.0.4.301">
+      <HintPath>LibDLLs\XAvailableUpdate-5.0.4.301.dll</HintPath>
+    </Reference>
+    <Reference Include="XBase-5.0.4.301">
+      <HintPath>LibDLLs\XBase-5.0.4.301.dll</HintPath>
+    </Reference>
+    <Reference Include="XDevice-5.0.4.301">
+      <HintPath>LibDLLs\XDevice-5.0.4.301.dll</HintPath>
+    </Reference>
+    <Reference Include="XHwid-5.0.3.302">
+      <HintPath>LibDLLs\XHwid-5.0.3.302.dll</HintPath>
+    </Reference>
+    <Reference Include="XLog-5.0.4.301">
+      <HintPath>LibDLLs\XLog-5.0.4.301.dll</HintPath>
+    </Reference>
+    <Reference Include="XNetworkCommon-4.0.18.300">
+      <HintPath>LibDLLs\XNetworkCommon-4.0.18.300.dll</HintPath>
+    </Reference>
+    <Reference Include="XNetworkGrs-4.0.18.300">
+      <HintPath>LibDLLs\XNetworkGrs-4.0.18.300.dll</HintPath>
+    </Reference>
+    <Reference Include="XSecurityEncrypt-1.1.5.302">
+      <HintPath>LibDLLs\XSecurityEncrypt-1.1.5.302.dll</HintPath>
+    </Reference>
+    <Reference Include="XSecuritySsl-1.1.5.302">
+      <HintPath>LibDLLs\XSecuritySsl-1.1.5.302.dll</HintPath>
+    </Reference>
+    <Reference Include="XStats-5.0.4.301">
+      <HintPath>LibDLLs\XStats-5.0.4.301.dll</HintPath>
+    </Reference>
+    <Reference Include="XTasks-1.4.1.300">
+      <HintPath>LibDLLs\XTasks-1.4.1.300.dll</HintPath>
+    </Reference>
+    <Reference Include="XUi-5.0.4.301">
+      <HintPath>LibDLLs\XUi-5.0.4.301.dll</HintPath>
+    </Reference>
+    <Reference Include="XUpdate-2.0.7.302">
+      <HintPath>LibDLLs\XUpdate-2.0.7.302.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Plugin.CurrentActivity">
+      <Version>2.1.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HMSLazyInputStream.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="MainApplication.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\agconnect-services.json" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.xml" />
+    <AndroidResource Include="Resources\layout\Toolbar.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HMS_Yarisma\HMS_Yarisma.csproj">
+      <Project>{54746A20-7AAE-4410-85E9-D250D7972517}</Project>
+      <Name>HMS_Yarisma</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LibDLLs\XAgconnectCore-1.4.0.300.dll" />
+    <None Include="LibDLLs\XAvailableUpdate-5.0.4.301.dll" />
+    <None Include="LibDLLs\XBase-5.0.4.301.dll" />
+    <None Include="LibDLLs\XDevice-5.0.4.301.dll" />
+    <None Include="LibDLLs\XHwid-5.0.3.302.dll" />
+    <None Include="LibDLLs\XLog-5.0.4.301.dll" />
+    <None Include="LibDLLs\XNetworkCommon-4.0.18.300.dll" />
+    <None Include="LibDLLs\XNetworkGrs-4.0.18.300.dll" />
+    <None Include="LibDLLs\XSecurityEncrypt-1.1.5.302.dll" />
+    <None Include="LibDLLs\XSecuritySsl-1.1.5.302.dll" />
+    <None Include="LibDLLs\XStats-5.0.4.301.dll" />
+    <None Include="LibDLLs\XTasks-1.4.1.300.dll" />
+    <None Include="LibDLLs\XUi-5.0.4.301.dll" />
+    <None Include="LibDLLs\XUpdate-2.0.7.302.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout1.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>
